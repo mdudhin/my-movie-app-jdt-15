@@ -1,7 +1,9 @@
 import React from "react";
+import { useToken } from "../../hooks/useToken";
 
 const Admin: React.FC = () => {
-  return <div>Admin</div>;
+  const { token } = useToken();
+  return <div>{token}</div>;
 };
 
 export default Admin;

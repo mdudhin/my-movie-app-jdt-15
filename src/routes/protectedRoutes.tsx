@@ -1,9 +1,10 @@
 import { Navigate, Outlet, useLocation } from "react-router";
+import { useToken } from "../hooks/useToken";
 
 const ProtectedRoutes: React.FC = () => {
   const { pathname } = useLocation();
 
-  const token = "";
+  const { token } = useToken();
 
   const authProtected = ["/login"];
   const tokenProtected = ["/admin"];
