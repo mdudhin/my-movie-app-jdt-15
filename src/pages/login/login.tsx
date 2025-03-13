@@ -2,6 +2,7 @@ import React from "react";
 import { postLogin } from "../../services/auth";
 import { useToken } from "../../hooks/useToken";
 import { useNavigate } from "react-router";
+import InputField from "../../component/input-field/input-field";
 
 const Login: React.FC = () => {
   const { changeToken } = useToken();
@@ -28,14 +29,10 @@ const Login: React.FC = () => {
       className="flex flex-col justify-center items-center w-full h-screen gap-1.5"
     >
       <h1>Username</h1>
-      <input type="text" name="username" className="border p-3 rounded-sm" />
+      <InputField type="text" name="username" />
 
       <h1>Password</h1>
-      <input
-        type="password"
-        name="password"
-        className="border p-3 rounded-sm"
-      />
+      <InputField type="password" name="password" />
 
       <button
         type="submit"

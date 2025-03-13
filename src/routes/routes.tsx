@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router";
 import Home from "../pages/home/home";
-import Detail from "../pages/detail/detail";
+import DetailAdmin from "../pages/admin/detail-admin";
 import Layout from "../layout";
 import Login from "../pages/login/login";
 import ProtectedRoutes from "./protectedRoutes";
 import Admin from "../pages/admin/admin";
+import Detail from "../pages/detail/detail";
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
       {
         element: <Admin />,
         path: "/admin",
+      },
+      {
+        element: <DetailAdmin />,
+        path: "/detail",
       },
       {
         element: <Login />,
